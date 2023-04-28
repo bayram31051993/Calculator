@@ -5,6 +5,10 @@ public class App {
         try (Scanner scanner = new Scanner(System.in)) {
             System.out.println("введите первое значение");
             int a = scanner.nextInt();
+            if(a == 0) {
+                System.out.println("Значение должно быть больше 0");
+                return;
+            }
             System.out.println("введите второе значение");
             int b = scanner.nextInt();
             System.out.println("введите арифметические операции");
