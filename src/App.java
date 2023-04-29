@@ -1,3 +1,4 @@
+import java.io.IOException;
 import java.util.Scanner;
 
 public class App {
@@ -9,24 +10,29 @@ public class App {
                 return;
             }
             char operation = scanner.next().charAt(0);
+
             int b = Integer.parseInt(scanner.next());
 
             switch (operation) {
                 case '+':
-                    System.out.println("вывод: " + a + b);
+                    System.out.print("вывод: ");
+                    System.out.println(a + b);
                     break;
                 case '-':
-                    System.out.println("вывод: " + (a - b));
+                    System.out.print("вывод: ");
+                    System.out.println(a - b);
                     break;
                 case '*':
-                    System.out.println("вывод: " + a * b);
+                    System.out.print("вывод: ");
+                    System.out.println(a * b);
                     break;
                 case '/':
                     if (b == 0) {
                         System.out.println("Делимое не должно быть 0");
                         return;
                     }
-                    System.out.println("вывод: " + a / b);
+                    System.out.print("вывод: ");
+                    System.out.println(a / b);
 
                     break;
                 default:
